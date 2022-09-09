@@ -12,4 +12,8 @@
     <servlet-name>users</servlet-name>
     <url-pattern>/users</url-pattern>
   </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>users</servlet-name>
+    <url-pattern>/users/*</url-pattern>
+  </servlet-mapping>
 </web-app>

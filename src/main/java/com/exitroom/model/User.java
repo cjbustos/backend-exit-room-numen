@@ -1,28 +1,49 @@
 package com.exitroom.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="users")
 public class User {
 
-	private String name;
+	@Id
+	@Column(name = "ID")
+	private String id;
+	@Column(name = "USERNAME")
+	private String username;
+	@Column(name = "PASSWORD")
 	private String password;
 
 	public User() {
 	}
 
-	public User(String name, String password) {
-		this.name = name;
+	public User(String id, String username, String password) {
+		this.id = id;
+		this.username = username;
 		this.password = password;
 	}
 
-	public String getName() {
-		return name;
+	public String getId() {
+		return id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getUsername() {
+		return username;
 	}
 
 	public String getPassword() {
 		return password;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public void setPassword(String password) {
